@@ -1,4 +1,5 @@
 // Slideshow/ carousell javascript 
+/*
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -25,7 +26,7 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace("active", "");
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
@@ -38,16 +39,16 @@ const aboutReadMore = document.querySelector('.about_section-button');
 aboutReadMore.addEventListener("click", function(){
   document.querySelector('.moreabout').classList.toggle('moreabout-toggle');
 
-  /* change button text */ 
+  /* change button text
   const initialText = 'READ MORE';
 
-  if (aboutReadMore.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+  if (aboutReadMore.textContent.includes(initialText)) {
     aboutReadMore.textContent = 'HIDE';
   } else {
     aboutReadMore.textContent = initialText;
   }
 });
-
+ */ 
 
 /* for the feedback container
 const menuController = document.getElementById('feedback-container');
