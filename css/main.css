@@ -13,6 +13,7 @@ background-color: #9FCCC6;
 */
 
 
+
 p {
   color: #434244;
   font-size: 20px;
@@ -179,6 +180,9 @@ position: relative;
   height: auto;
 }
 
+.indiv-h3 {
+  font-size: 10px;
+}
 
 /* need this div because images are different sizes so images can be auto sized and label can be consistently placed on top */
 .category-grid-indiv-label {

@@ -32,6 +32,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   timer = setTimeout( function(){ plusSlides(1); }, 3000 );
 }
+*/ 
 
 // about us button read more 
 const aboutReadMore = document.querySelector('.about_section-button');
@@ -39,7 +40,7 @@ const aboutReadMore = document.querySelector('.about_section-button');
 aboutReadMore.addEventListener("click", function(){
   document.querySelector('.moreabout').classList.toggle('moreabout-toggle');
 
-  /* change button text
+ 
   const initialText = 'READ MORE';
 
   if (aboutReadMore.textContent.includes(initialText)) {
@@ -48,7 +49,7 @@ aboutReadMore.addEventListener("click", function(){
     aboutReadMore.textContent = initialText;
   }
 });
- */ 
+
 
 /* for the feedback container
 const menuController = document.getElementById('feedback-container');
