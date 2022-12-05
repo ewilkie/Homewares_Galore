@@ -1,0 +1,419 @@
+
+/*
+header {
+width: 100vw;
+display: flex;
+justify-content: space-around ;
+top: 0;
+position: fixed;
+z-index: 2;
+height: 60px;
+background-color: #9FCCC6;
+}
+*/
+
+
+p {
+  color: #434244;
+  font-size: 20px;
+  line-height: 1.75;
+  letter-spacing: .015em;
+  margin: 0;
+  padding: 0 0 18px;
+}
+
+/* header */
+.header-main {
+  width: 100%;
+  background-color: #9FCCC6;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+  height: 60px;
+}
+
+.header-content {
+
+
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+nav {
+
+  display: flex;
+  align-items: center;
+  
+  }
+  
+.nav-menu-item {
+  padding-left: 10px;
+}
+
+.nav-menu-item:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+/* slide show/ carousel */
+.slideshow-container {
+margin-top: 60px;
+position: relative;
+
+}
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: darkgrey;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+/* The dots/bullets/indicators */
+.dot-div {
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }  
+
+/*
+ .category {
+    border: 2px solid red;
+     width: 80%;
+     margin: 0 auto; 
+ } 
+*/ 
+
+
+
+/* section seperator */
+.separator{
+  display: flex;
+  align-items: center;
+  color: #182636;
+}
+
+.separator h2{
+  padding: 0 2rem; /* creates the space */
+}
+
+.separator .line{
+  flex: 1;
+  height: 1px;
+  background-color: #bbb;
+}
+
+/* shop by category grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+/* indiv grid container to position lable and sale */
+.category-grid-indiv {
+  position: relative;
+}
+
+.category-grid-indiv:hover {
+  cursor:pointer;
+  opacity: 0.6;
+}
+
+/* auto size image to grid container */
+.category-grid-indiv img {
+  max-width: 100%; 
+  display: block; 
+  height: auto;
+}
+
+
+/* need this div because images are different sizes so images can be auto sized and label can be consistently placed on top */
+.category-grid-indiv-label {
+  text-align: center;
+
+  position: absolute;
+  background-color: #9FCCC6; 
+  bottom: 0px;
+  width: 100%;
+  z-index: 100;
+}
+
+.category-grid-indiv h3 {
+  padding: 5px 0 5px 0; 
+  margin: 0px;
+}
+
+.sale {
+  background-color: #E41951;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  padding: 10px; 
+  color: white;
+}
+
+.sale h4 {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.lookbook-content {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.lookbook-image {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  position: relative;
+}
+
+.lookbook-image img {
+  max-width: 100%; 
+  display: block; 
+  height: auto;
+}
+
+/*
+.lookbook-image-cat {
+  background-color: #E41951;
+  border-radius: 50%;
+  top: 20px;
+  left: 0px;
+  position: absolute;
+  width: 220px;
+  height: 80px;
+}
+*/
+.circle {
+  background-color: #E41951;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  max-height: 40px;
+}
+
+.lookbook-button {
+  color: white;
+  padding: 15px;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  right: 0;
+  width: fit-content;
+  background-color: #9FCCC6;
+}
+
+.lookbook-button:hover {
+  cursor: pointer;
+}
+
+
+/*
+.gift-inspo {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #bbb;
+}
+*/
+
+/* About */
+.about_section-button {
+  color: black;
+  padding: 15px;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  right: 0;
+  width: fit-content;
+}
+
+.about_section-button:hover {
+  background-color: #9FCCC6;
+  color: white;
+  cursor: pointer;
+}
+
+/*
+.transition {
+  transition: all 1s ease-in-out;
+  transition-delay: 2s;
+}
+*/
+
+.moreabout {
+  display: none;
+}
+
+.moreabout-toggle {
+  display: block;
+}
+
+/* footer */
+.footer-main {
+
+  width: 100%;
+  background-color: #9FCCC6;
+
+}
+
+.footer-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-another {
+  border-top: 1px solid #d3d3d3;
+  width: 100%;
+  background: #fff 0 0 no-repeat padding-box;
+
+}
+
+.footer-top {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top-indiv {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.footer-top-indiv img {
+  width: 60px;
+  margin-right: 18px;
+}
+
+.footer-bottom {
+
+  width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.footer-bottom-column ul {
+  text-decoration: none;
+}
+
+/* Too complicated leave for now
+.feedback-container {
+
+    position: fixed;
+    width: 300px;
+    height: 800px;
+    top: 600px;
+    right: 0px; 
+    /* Animation  
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    border: 2px solid black;
+    
+}
+
+
+.feedback-tab {
+    margin-top: 50px;
+    position: absolute;
+    left: -80px;
+    height: 40px;
+    width: 200px;
+    /* need to rotate whole div for text to line up inside 
+    transform: rotate(-90deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    background: #F2AB34;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    border: 2px solid black;
+  }
+  
+  .feedback-tab a {
+    text-align: center;
+    position: relative;
+    background: #F2AB34;
+    width: 180px;
+    
+    border: 2px solid black;
+  }
+
+
+  .feedback-tab a:hover { 
+    background: black;
+    color:#000;
+  }
+
+.feedback-open {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  */
