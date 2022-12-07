@@ -12,9 +12,19 @@ background-color: #9FCCC6;
 }
 */
 
+.h2 {
+  font-size: 28px;
+}
 
+.h3 {
+  font-size: 22px;
+}
 
-p {
+.h4 {
+  font-size: 18px;
+}
+
+.p {
   color: #434244;
   font-size: 20px;
   line-height: 1.75;
@@ -68,11 +78,16 @@ nav {
 }
 
 
-/* slide show/ carousel */
+/* slide show/ carousel 
 .slideshow-container {
-margin-top: 60px;
-position: relative;
 
+position: relative;
+z-index: 500;
+border: 2px solid red;
+}
+*/
+#carouselExampleControls {
+  margin-top: 80px;
 }
   
 /* Hide the images by default */
@@ -144,6 +159,7 @@ position: relative;
   display: flex;
   align-items: center;
   color: #182636;
+  padding: 20px 0;
 }
 
 .separator h2{
@@ -180,9 +196,7 @@ position: relative;
   height: auto;
 }
 
-.indiv-h3 {
-  font-size: 10px;
-}
+
 
 /* need this div because images are different sizes so images can be auto sized and label can be consistently placed on top */
 .category-grid-indiv-label {
@@ -246,6 +260,10 @@ position: relative;
   cursor: pointer;
 }
 
+.lookbook-h3 {
+  padding-right: 20px;
+  margin-bottom: 40px;
+}
 
 /*
 .lookbook-image-cat {
@@ -312,12 +330,7 @@ position: relative;
   cursor: pointer;
 }
 
-/*
-.transition {
-  transition: all 1s ease-in-out;
-  transition-delay: 2s;
-}
-*/
+
 
 .moreabout {
   display: none;
@@ -329,23 +342,22 @@ position: relative;
 
 /* footer */
 .footer-main {
-
   width: 100%;
   background-color: #9FCCC6;
-
+  border: 2px solid black;
 }
 
 .footer-content {
-  margin-top: 20px;
+
   display: flex;
   flex-direction: column;
+  border: 2px solid black;
 }
 
 .footer-another {
   border-top: 1px solid #d3d3d3;
   width: 100%;
   background: #fff 0 0 no-repeat padding-box;
-
 }
 
 .footer-top {
@@ -354,6 +366,7 @@ position: relative;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
 }
 
 .footer-top-indiv {
@@ -374,8 +387,8 @@ position: relative;
   padding-bottom: 20px;
 }
 
-.footer-bottom-column ul {
-  text-decoration: none;
+.footer-bottom-copy {
+  text-align: center;
 }
 
 
@@ -384,12 +397,12 @@ position: relative;
 .feedback-container {
   position: fixed;
   right: 0;
-  top: 30%;
-  /* border-radius: 20px 0 0 20px; */
+  top: 25%;
+  border-radius: 20px 0 0 20px;
   width: 600px;
-
+  background-color: #9FCCC6;
   z-index: 100;
-  border: 2px solid black;
+  border: 1px solid black;
   transform: translateX(100%);
   transition: all 0.5s ease-in-out;
 }
@@ -399,7 +412,7 @@ position: relative;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
-  left: -83px;
+  left: -82px;
   bottom: 100px;
   padding: 10px 20px;
   position: absolute;
@@ -414,8 +427,8 @@ position: relative;
 }
 
 .feedback-form {
-  background-color: #9FCCC6;
-  height: 300px;
+  padding: 30px;
+  width: 600px;
 }
 
 .feedback-open {
@@ -426,12 +439,48 @@ position: relative;
 
 
 .feedback-row {
-  padding-left: 50px;
-  position: relative;
-
+  padding-bottom: 10px;
 }
 
+.feedback-name {
+  display:flex;
+  width: 150px;
+}
 
+input[type=submit] {
+  margin-top: 30px;
+  padding: 5px 30px;
+  width: fit-content;
+}
+
+label,input{
+  display:flex;
+  flex-direction:column;
+  width: 300px;
+}
+
+#comments {
+  height: 300px;
+  width: 300px;
+}
+
+.red {
+  color: red;
+  font-weight: 500;
+}
+
+.red-border{
+  border: 2px solid red;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+select:focus {
+  background: white;
+  border: 2px solid black;
+  outline: none;
+  box-shadow: 0 0 6px grey;
+}
 
 /*
 .feedback-button {

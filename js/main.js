@@ -28,6 +28,14 @@ menuController.addEventListener('click', function() {
 function handleFormSubmission(event) {
   event.preventDefault();
 
+  const labelError = document.querySelector('label');
+  const inputError = document.querySelector('input');
+
+  labelError.innerText="Name cannot be empty";
+  labelError.classList.add('red');
+  inputError.classList.add('red-border');
+
+  /*
   const nameErrorContainer = document.querySelector('.name-error-container');
   nameErrorContainer.innerText = '';
   
@@ -39,6 +47,8 @@ function handleFormSubmission(event) {
     nameErrorContainer.innerText = 'This field cannot be empty';
     firstNameInputEl.style.borderColor = 'red';
   }
+  */
+
 }
 
 const applicationForm = document.querySelector('.feedback-form');
