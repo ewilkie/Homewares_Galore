@@ -5,7 +5,7 @@
 }
 
 .h3 {
-  font-size: 22px;
+  font-size: 1.5vh;
 }
 
 .h4 {
@@ -50,7 +50,6 @@
   top: 0;
   position: fixed;
   z-index: 1000;
-  height: 60px;
 }
 
 /* this div is to set header to align items and is responsive */
@@ -64,6 +63,18 @@
 }
 
 
+
+@media (max-width: 768px){
+  .header-content {
+    background-color: #E41951;
+  }
+}
+
+/*480 pixels // phones
+768 pixels // tablets
+960 pixels // small screens
+1200 pixels // big screens
+*/
 
 
 nav {
@@ -95,10 +106,14 @@ nav {
 .nav-menu-item a:hover {color:white;}
 .nav-menu-item a:active {color:white;}
 
+
+
+
+
 /* centering in middle */
 .main-container {
   margin: 0 auto;
-  width: 100%;
+  width: 100vw;
   max-width: 1200px;
   padding: 10px;
 }
@@ -121,6 +136,21 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 25px;
+}
+
+/* between tablet and big screen */ 
+@media (min-width: 768px) and (max-width: 1200px) {
+  .category-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+/* between tablet and anything smaller such as mobile */
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* indiv grid container to position lable and sale */
@@ -300,15 +330,18 @@ nav {
 .footer-top {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     padding-top: 20px;
+    border: 2px solid black;
 }
 
 .footer-top-indiv {
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin-left: 18px;
+  border: 2px solid black;
+  position: relative;
 }
 
 .footer-top-indiv img {
@@ -316,8 +349,12 @@ nav {
   margin-right: 18px;
 }
 
-.footer-bottom {
+.footer-top-indiv h4 {
+  margin: 0px;
+  padding: 0px;
+}
 
+.footer-bottom {
   width: 1200px;
   margin: 0 auto;
   padding-bottom: 20px;
@@ -327,8 +364,9 @@ nav {
   text-align: center;
 }
 
-
+/**********************/
 /* feedback container */
+/**********************/
 
 .feedback-container {
   position: fixed;
@@ -419,6 +457,7 @@ select:focus {
 }
 
 /******************/
+/* Second page    */
 /* Stores Styling */
 /******************/
 
