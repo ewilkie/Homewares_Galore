@@ -77,6 +77,7 @@ nav {
 .nav-menu-item {
   padding-left: 10px;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .nav-menu-item a {
@@ -91,11 +92,10 @@ nav {
 }
 
 
-.nav-menu-item a:link {color:black;}
+.nav-menu-item a:link {color:white;}
 .nav-menu-item a:visited {color:black;}
-.nav-menu-item a:active  {color:white;}
-.nav-menu-item a:hover  {color:white;}
-
+.nav-menu-item a:hover {color:white;}
+.nav-menu-item a:active {color:white;}
 
 /* centering in middle */
 .main-container {
@@ -110,10 +110,11 @@ nav {
   margin-top: 80px;
 }
 
+/*
 .stores-main {
   margin-top: 80px;
 }
-  
+  */
 
 
 
@@ -250,7 +251,6 @@ nav {
 
 
 
-/
 
 /* About */
 .about_section-button {
