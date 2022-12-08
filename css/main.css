@@ -484,94 +484,61 @@ select:focus {
   box-shadow: 0 0 6px grey;
 }
 
-/*
-.feedback-button {
-  height: 40px;
-  border: solid 3px #CCCCCC;
-  background: #333;
-  width: 100px;
-  line-height: 32px;
-  font-weight: 600;
-  color: white;
-  transform: rotate(-90deg);
+/******************/
+/* Stores Styling */
+/******************/
+
+.store-container {
+  border: 2px solid black;
+  margin-top: 80px;
+}
+
+.store-container-indiv {
+  margin: 20px; 
+  border: 1px solid black;
+  background: #fff 0 0 no-repeat padding-box;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "details store-buttons";
+}
+
+.store-title {
+  grid-area: title;
+  padding: 20px 20px 0px 20px;
+}
+
+.store-details {
+  grid-area: details;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.store-buttons {
+  grid-area: store-buttons;
+  border: 2px solid green;
+}
+
+.store-info {
+  background-color: white;
   text-align: center;
-  font-size: 17px;
-  position: absolute;
-  right: 10px;
-  top: 75%;
-  z-index: 999;
+  width: 200px;
+  margin: 5px auto;
+  padding: 5px;
 }
-*/
+
+.store-info:hover {
+  background-color: blue;
+}
 
 /*
-.menu {
-  background-color: rgba(7,34,53,1);
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 60%;
-  opacity: 0;
-  padding: 15px 30px;
-  position: fixed;
-  transition: all 0.35s ease-in-out;
-  transform: translateX(100%);
-  z-index: 999;
-  height: 200px;
+.h2 {
+  font-size: 35px;
+  border: solid 2px black;
 }
 */
-
-
-
-/* Too complicated leave for now
-.feedback-container {
-
-    position: fixed;
-    width: 300px;
-    height: 800px;
-    top: 600px;
-    right: 0px; 
-    /* Animation  
-    transition-property: all;
-    transition-duration: .5s;
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-    border: 2px solid black;
-    
+.store-details li { 
+  list-style: none
 }
-
-
-.feedback-tab {
-    margin-top: 50px;
-    position: absolute;
-    left: -80px;
-    height: 40px;
-    width: 200px;
-    /* need to rotate whole div for text to line up inside 
-    transform: rotate(-90deg);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-    background: #F2AB34;
-    border-radius: 15px 15px 0px 0px;
-    text-align: center;
-    border: 2px solid black;
-  }
-  
-  .feedback-tab a {
-    text-align: center;
-    position: relative;
-    background: #F2AB34;
-    width: 180px;
-    
-    border: 2px solid black;
-  }
-
-
-  .feedback-tab a:hover { 
-    background: black;
-    color:#000;
-  }
-
-.feedback-open {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-
-  */
