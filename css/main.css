@@ -83,7 +83,6 @@ html,body
   display: flex;
   align-items: center;  
   text-decoration: none;
-  border: 2px solid black;
 }
   
 .nav-menu-item {
@@ -94,42 +93,87 @@ html,body
 
 .nav-menu-item a {
   text-decoration: none;
+  color: black;
 }
 
-.nav-menu-item:hover {
+/*
+.nav-menu-item a:hover {
   color: white;
   cursor: pointer;
 }
-
+*/
 
 .nav-menu-item a:link {color:white;}
 .nav-menu-item a:visited {color:black;}
 .nav-menu-item a:hover {color:white;}
 .nav-menu-item a:active {color:white;}
 
-.nav-outer img {
-  display: none;
+
+.nav-outer {
   position: relative;
 }
 
-.nav-outer img:hover {
-  background-color: #E41951;
+.nav-outer img {
+  display: none;
+  padding: 15px;
 }
 
 
-@media (max-width: 560px){
-  .nav {
-    display: none;
-  }
+@media (max-width: 760px){
+
+  /* show hamburger menu */
   .nav-outer img {
     display: block;
     cursor: pointer;
   }
 
-}
-}
+  /* to keep hamburger highlighted when nav is hovered  use .nav-outer image:hover to remove highlight*/
+  .nav-outer:hover {
+    background-color: #E41951;
+  }
+
+  /* remove nav otherwise displayed on resize */
+  .nav {
+    display: none;
+  }
+
+  /* the plus is so that the styles can be applied to nav */
+  .nav-outer img:hover + .nav {
+    border: 1px solid #E41951;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    background-color: white;
+    padding: 20px;
+  }
+
+  /* this is for after the nav is visible only styles applied on hover */
+  .nav:hover {
+    border: 1px solid #E41951;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .nav-menu-item {
+    padding: 5px 0px;
+  }
+  .nav-menu-item:hover {
+    background-color: #E41951;
+  }
+  .nav-menu-item:hover a {
+    color: white;
+  }
+
+  
+  
 
 
+}
 
 /* centering in middle */
 .main-container {
@@ -137,7 +181,6 @@ html,body
   width: 100vw;
   max-width: 1200px;
   padding: 10px;
-  border: 2px solid purple;
 }
 
 
