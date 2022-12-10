@@ -58,12 +58,12 @@ applicationForm.addEventListener('submit', handleFormSubmission);
 
 // for modal
 const overlay = document.querySelector(".overlay");
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal-div");
 
 // open modal function
 const openModal = function (event) {
   event.preventDefault();
-  
+
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
@@ -78,6 +78,8 @@ openModalBtn.addEventListener("click", openModal);
 const closeModalBtn = document.querySelector(".btn-close");
 
 const closeModal = function (event) {
+
+  event.preventDefault();
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
