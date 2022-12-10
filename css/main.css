@@ -69,7 +69,8 @@ html,body
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 30px 0 20px;
+
 }
 
 /*480 pixels // phones
@@ -96,13 +97,6 @@ html,body
   color: black;
 }
 
-/*
-.nav-menu-item a:hover {
-  color: white;
-  cursor: pointer;
-}
-*/
-
 .nav-menu-item a:link {color:white;}
 .nav-menu-item a:visited {color:black;}
 .nav-menu-item a:hover {color:white;}
@@ -118,7 +112,7 @@ html,body
   padding: 15px;
 }
 
-
+/* For tablet size and below show hamburger with black nav */
 @media (max-width: 760px){
 
   /* show hamburger menu */
@@ -127,7 +121,7 @@ html,body
     cursor: pointer;
   }
 
-  /* to keep hamburger highlighted when nav is hovered  use .nav-outer image:hover to remove highlight*/
+  /* to keep hamburger highlighted when nav is hovered  use .nav-outer img:hover to remove highlight*/
   .nav-outer:hover {
     background-color: #E41951;
   }
@@ -165,40 +159,34 @@ html,body
   .nav-menu-item:hover {
     background-color: #E41951;
   }
+
+  /* so that the whole div is clickable */
+  .nav-menu-item a {
+    display: block;
+  }
   .nav-menu-item:hover a {
     color: white;
   }
-
-  
-  
-
-
 }
 
-/* centering in middle */
+/* centering main section of page in the middle */
 .main-container {
   margin: 0 auto;
   width: 100vw;
   max-width: 1200px;
-  padding: 10px;
+  padding: 0px 30px 20px 20px;
 }
 
 
 /* slide/carousel */
-
 #carouselExampleControls {
   margin-top: 80px;
 }
 
-/*
-.stores-main {
-  margin-top: 80px;
-}
-  */
-
-
-
+/*************************/
 /* shop by category grid */
+/*************************/
+
 .category-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -232,7 +220,7 @@ html,body
   z-index: 100;
 }
 
-.category-grid-indiv h3 {
+.category-grid-indiv-label h3 {
   padding: 5px 0 5px 0; 
   margin: 0px;
 }
@@ -244,6 +232,7 @@ html,body
   left: 0px;
   padding: 10px; 
   color: white;
+  
 }
 
 .sale h4 {
@@ -251,7 +240,50 @@ html,body
   padding: 0px;
 }
 
-/* between tablet and big screen */ 
+.sale_expand {
+  width: 200px;
+  background-color: #E41951;
+  transition: width 2s ease-in;
+}
+
+
+@media (min-width: 768px) {
+
+  .category-grid-indiv:hover .sale {
+    width: 100%;
+    z-index: 800;
+  }
+
+  .category-grid-indiv:hover .category-grid-indiv-label {
+    color: white;
+    z-index: 800;
+}
+
+}
+
+
+@media (max-width: 768px) {
+  .category-grid-indiv-label .h3 {
+    text-align: end;
+    padding-right: 10px;
+  }
+
+  .category-grid-indiv:hover .category-grid-indiv-label {
+    color: white;
+  }
+
+  .category-grid {
+    margin-right: 20px;
+  }
+
+  .category-grid-indiv:hover .category-grid-indiv-label {
+    background-color: #E41951;
+  }
+  
+}
+
+
+/* between tablet and up to big screen */ 
 @media (min-width: 768px) and (max-width: 1200px) {
   .category-grid {
     grid-template-columns: 1fr 1fr 1fr;
@@ -277,11 +309,13 @@ html,body
     top: -14px;
     left: 10px;
     z-index: 600;
-  }
 
+  }
 }
 
-
+/*******************************/
+/* Styling INspiration section */
+/*******************************/
 
 
 .lookbook-content {

@@ -1,3 +1,43 @@
+//accross
+// for sale animation
+/*
+const categoryGridIndivAll = document.querySelectorAll('.category-grid-indiv');
+
+for (let i=0; i < categoryGridIndivAll.length; i++) {
+
+  //const categoryGridIndiv = categoryGridIndivAll[i]
+  //const sale = document.querySelector('.sale');
+
+  //const orgWidht = sale.style.width;
+
+  categoryGridIndivAll[i].addEventListener("mouseover",  (event) => {
+    // for response event 
+    if (window.innerWidth > 760) {
+      const sale = event.target.querySelector('.sale')
+      if (sale !== null ){
+        sale.style.width= "200px";
+      }
+     // alert(event.target.classList.contains('.saleplace'));
+      //if(event.target.classList.contains(".sale")){
+
+        //sale.style.width = "200px";
+        //event.target.classList.toggle(".sale_expand");
+      //}
+      //categoryGridIndiv.offsetWidth
+    }
+  });
+
+  //categoryGridIndivAll[i].addEventListener("mouseleave",  (event) => {
+    // for response event 
+    //if (window.innerWidth > 760) {
+      //sale.style.width = orgWidht;
+      //categoryGridIndiv.offsetWidth
+  //  }
+  //});
+
+}
+*/
+
 // about us button read more 
 const aboutReadMore = document.querySelector('.about_section-button');
 
