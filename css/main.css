@@ -276,7 +276,7 @@ html,body
     margin-right: 20px;
   }
 
-  .category-grid-indiv:hover .category-grid-indiv-label {
+  .category-grid-indiv:hover .saleplace {
     background-color: #E41951;
   }
   
