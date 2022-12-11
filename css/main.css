@@ -1,4 +1,6 @@
+/*********************/
 /* Main basic styling */
+/*********************/
 
 html,body
 {
@@ -9,6 +11,7 @@ html,body
     overflow-x: hidden; 
 }
 
+/* use vh for text headers to make responsive */
 .h2 {
   font-size: 2.5vh;
 }
@@ -52,10 +55,11 @@ html,body
   background-color: #bbb;
 }
 
-
+/***************************/
 /* Styling HTML componerts */
+/**************************/
 
-/* header */
+/* fixed header */
 .header-main {
   width: 100%;
   background-color: #9FCCC6;
@@ -75,17 +79,13 @@ html,body
 
 }
 
-/*480 pixels // phones
-768 pixels // tablets
-960 pixels // small screens
-1200 pixels // big screens
-*/
-
+/**************/
+/* Navigation */
+/**************/
 
 .nav {
   display: flex;
   align-items: center;  
-  text-decoration: none;
 }
   
 .nav-menu-item {
@@ -259,11 +259,13 @@ html,body
   padding: 0px;
 }
 
+/*
 .sale_expand {
   width: 200px;
   background-color: #E41951;
   transition: width 2s ease-in;
 }
+*/
 
 .category-grid-indiv:hover .category-grid-indiv-label {
   color: white;
@@ -274,6 +276,7 @@ html,body
   .sale {
     width: 20%;
     transition: width 0.5s ease-in-out;
+    box-shadow: 0 4px 4px black;
   }
 
   .category-grid-indiv:hover .sale {
@@ -302,7 +305,7 @@ html,body
   .saleplace {
     background: linear-gradient(to left,#9FCCC6 50%, #E41951 50%) right;
     background-size: 200%;
-    transition: .5s ease-out;
+    transition:  .5s ease-out;
   }
   .category-grid-indiv:hover .saleplace {
     background-position: left;
@@ -371,10 +374,16 @@ html,body
   right: 0;
   width: fit-content;
   background-color: #9FCCC6;
+  border-radius: 20px;
+  font-weight: 600;
 }
 
 .lookbook-button:hover {
   cursor: pointer;
+  background-color: white;
+  color:#E41951;
+  border: 1px solid #E41951;
+
 }
 
 .lookbook-h3 {
@@ -431,6 +440,7 @@ html,body
   transition: all 1s ease-in-out;
   right: 0;
   width: fit-content;
+  border-radius: 20px;
 }
 
 .about_section-button:hover {
@@ -598,12 +608,12 @@ label,input{
 }
 
 .red {
-  color: red;
+  color: #E41951;
   font-weight: 500;
 }
 
 .red-border{
-  border: 2px solid red;
+  border: 2px solid #E41951;
 }
 
 textarea:focus,
@@ -658,7 +668,12 @@ select:focus {
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "title title"
+    "add-tlf add-tlf"
     "details store-buttons";
+}
+
+.store-container-indiv:hover {
+  box-shadow: 0 0px 10px black;
 }
 
 @media (max-width: 680px) {
@@ -666,9 +681,15 @@ select:focus {
     grid-template-columns: 1fr;
     grid-template-areas:
       "title"
+      "add-tlf"
       "details"
       "store-buttons";
   }
+}
+
+.add-tlf {
+  grid-area: add-tlf;
+  padding: 20px 20px 0px 20px;
 }
 
 .store-title {
@@ -697,7 +718,7 @@ select:focus {
 }
 
 .address {
-  font-weight: 600;
+  font-weight: 200;
   font-style: italic;
 }
 
@@ -731,7 +752,11 @@ select:focus {
   box-shadow: 0 0 10px grey;
 }
 
-          /* for modal */
+/*************/
+/* for modal */
+/************/
+
+/* blur bakcground when modal active */
 .overlay {
   position: fixed;
   top: 0;
@@ -745,25 +770,13 @@ select:focus {
   z-index: 910;
 }
 
+/* to toggle between modal hide and show */
 .hidden {
   display: none;
 }
 
 
-.modal-bg {
-  position: absolute;
-  top:0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0,0,0,0.7);
-  z-index: 998;
-  content: "";
-}
-
-
 .modal-div {
-
   z-index: 999;
   position: absolute;
   top: 50%;
@@ -787,8 +800,8 @@ select:focus {
 
 .modal-sec {
   display: flex;
-  flex-direction: column;
-  margin-top: 10px;
+  flex-direction: row;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -796,13 +809,13 @@ select:focus {
   text-align:left;
 }
 
-.modal-button {
+.modal-cls-button {
   position: absolute;
   right: 2;
   top: 2;
 }
 
-.modal-button:hover {
+.modal-cls-button:hover {
   background-color: grey;
 }
 
@@ -839,17 +852,25 @@ select:focus {
   width: 80%;
 }
 
-@media (min-width: 480px){
+@media (max-width: 760px){
   .modal-sec {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .modal-sec p  {
+
+  .modal-text p {
     text-align: center;
+    margin-bottom: 25px;
   }
 
   .modal-store-btn {
-    padding: 20px;
-    margin: 20px;
-    height: 100%
+    margin: 0;
+    padding: 10px;
+  }
+
+  .modal-content .separator{
+    display: block;
   }
 }
