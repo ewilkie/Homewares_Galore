@@ -504,7 +504,7 @@ html,body
 
 
 /* table and small tables change footer layout */
-@media (max-width:760px) and (min-width:580px) {
+@media (max-width:768px) and (min-width:580px) {
   .footer-top-indiv {
     display: flex;
     align-items: center;
@@ -835,7 +835,7 @@ select:focus {
   width: 80%;
 }
 
-@media (max-width: 760px){
+@media (max-width: 768px){
   .modal-sec {
     display: flex;
     flex-direction: column;
