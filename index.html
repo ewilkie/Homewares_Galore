@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
     </head>
     <body>        
-        <!-- Overlay ofr modal -->
+        <!-- Overlay for modal -->
         <div class="overlay hidden" ></div>
+        <!-- modal section -->
         <div class="modal-div hidden">
-            <button class="modal-button btn-close"></button>    
+            <button class="modal-cls-button btn-close"></button>    
             <div class="modal-content">
                 <div class="separator">
                     <div class="line"></div>
@@ -21,18 +22,18 @@
                     <div class="line"></div>
                 </div>
                 <p> For general inquiries you can contact us on the following number:</p>
-                <p class = "tlf">1300 000 000</p>
+                <h3 class="h3">1300 000 000</h3>
                 <div class="modal-sec">
-                <div class="modal-text">   
-                    <p>Otherwise get in touch with a specific store</p>
-                </div> 
-                <div class="modal-store-btn">
-                    <a href="stores.html">Store location</a>
-                </div>
-            </div>
-                
+                    <div class="modal-text">   
+                        <p>Otherwise get in touch with a specific store</p>
+                    </div> 
+                    <div class="modal-store-btn">
+                        <a href="stores.html">Store location</a>
+                    </div>
+                </div>      
             </div>
         </div> 
+        <!-- Header -->
         <header class="header-main">
             <div class="header-content">           
                 <div class="logo">
@@ -48,18 +49,19 @@
                 </nav>
             </div>
         </header>
-        
+        <!-- main content -->
         <main class="main-container">
+            <!-- Carousel -->
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img src="images/Slider/Slider_xmas_sale_500px.png" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="images/Slider/Slider_bedroom_sale_500px.png" class="d-block w-100" alt="...">
+                    <img src="images/Slider/Slider_bedroom_sale_500px_v3.png" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="images/Slider/Slider_sunday_outdoors_sale_500px.png" class="d-block w-100" alt="...">
+                    <img src="images/Slider/Slider_sunday_outdoors_sale_500px_v2.png" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
                     <img src="images/Slider/Slider_towel_sale_500px.png" class="d-block w-100" alt="...">
@@ -77,6 +79,7 @@
                   <span class="visually-hidden">Next</span>
                 </button>
             </div>    
+            <!-- Category grid section --> 
             <section class="category">
                 <div class="separator">
                     <div class="line"></div>
@@ -168,6 +171,7 @@
                     </div>
                 </div>
             </section>
+            <!-- Inspiration section -->
             <section class="lookbook-section">
                 <div class="separator">
                     <div class="line"></div>
@@ -188,7 +192,8 @@
                         </div>
                     </div>
                 </div>
-            </section>    
+            </section>  
+            <!-- About section -->  
             <section class="about_section" id="about_section">
                 <div class="separator">
                     <div class="line"></div>
@@ -211,40 +216,42 @@
                     <p>With over 50 years of experience, Bed Bath N' Table have become famous for our high-quality homewares and bedding at affordable prices. Our exclusive designs and quality are what separates us from others, makes us unique and bring our brands to life. By using only the best fabrics, materials and manufacturing processes for all our homewares, bedding and bathroom products, we make sure your new items are designed to last.</p>
                 </div>
             </section>
+            <!-- Feedbakc container -->
             <section class="feedback-container">
                 <div class="feedback-button">Feedback</div>
                 <form class="feedback-form">  
                     <fieldset>
                         <div class="feedback-row"> 
-                            <label for="name">Your Name</label>                         
-                            <input type="text" placeholder="Homo Sapien" id="fname" autofocus>
+                            <label for="fname">Your Name</label>                         
+                            <input type="text" placeholder="Homo Sapien" id="fname" name="fname" autofocus>
 
                         </div>
                         <div class="feedback-row">
-                            <label for="name">Mobile number *</label>   
-                            <input type="text" placeholder="0412345467" id="lname">
+                            <label for="mobile">Mobile number *</label>   
+                            <input type="text" placeholder="0412345467" id="mobile" name="mobile">
 
                         </div>
                         <div class="feedback-row">
-                            <label for="name">Email *</label>                  
-                            <input type="text" placeholder="name@emial.com" id="mobile">
+                            <label for="email">Email *</label>                  
+                            <input type="text" placeholder="name@emial.com" id="email" name="email">
 
                         </div>
                     </fieldset>
                     <fieldset>
-                        <div class="feedback-row select">
-                        <label for="select">Select List</label>
-                        <select id="select">
-                            <option value>Choose</option>
-                            <option value>Option 1</option>
-                            <option value>Option 2</option>
+                        <div class="feedback-row">
+                        <label for="select">Please select from this list *</label>
+                        <select id="select" name="select">
+                            <option value="choose">Choose</option>
+                            <option value="option1">Customer service</option>
+                            <option value="option2">Product Quality</option>
+                            <option value="option3">Shipping & returns</option>
                         </select>
                     </div>
                     </fieldset>
                     <fieldset>
                     <div class="feedback-row">
                         <label for="comments">Comments</label>
-                        <textarea id="comments"></textarea>
+                        <textarea id="comments" name="comments"></textarea>
                     </div>
                 </fieldset>
                     <fieldset>
@@ -253,7 +260,7 @@
                 </form>
             </section>
         </main>
-        
+        <!-- end of main start of footer -->
         <footer class="footer-main">
             <div class="footer-content">
                 <div class="footer-another">
@@ -289,7 +296,6 @@
                     </div>                 
                 </div>
             </div>
-        
             <div class="footer-bottom">
                 <div class="footer-bottom-column">
                     <div class="footer-bottom-copy"> © 2022 Homewares Galore. All Rights Reserved. </div>
@@ -299,5 +305,6 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>

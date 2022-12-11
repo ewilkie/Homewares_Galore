@@ -4,8 +4,8 @@
 const storeObj = [
     {
     name: "Melbourne CBD",
-    address: "abs street",
-    tlf: "123456895",
+    address: "224 - 234 Canterbury Road, Bayswater North, VIC 3153 Australia",
+    tlf: "(03) 9729 8077",
     hours: {
         week: '09:00-17:30',
         sat: '10:00-16:30',
@@ -14,8 +14,8 @@ const storeObj = [
     },
     {
     name: "Ballarat",
-    address: "abs street",
-    tlf: "123456895",
+    address: "333 Gillies Street North, Wendouree, VIC 3355 Australia",
+    tlf: "(03) 5338 2164",
     hours: {
       week: '09:00-17:30',
       sat: '10:00-16:30',
@@ -24,8 +24,8 @@ const storeObj = [
     },
     {
     name: "Melbourne Fitzroy",
-    address: "abs street",
-    tlf: "123456895",
+    address: "111 Cecil Street, South Melbourne, VIC 3205 Australia",
+    tlf: "(03) 9139 5463",
     hours: {
       week: '09:00-17:30',
       sat: '10:00-16:30',
@@ -34,8 +34,8 @@ const storeObj = [
     },
     {
       name: "Bendigo",
-      address: "Bendigo street",
-      tlf: "123456895",
+      address: "6 Marong Road, Bendigo, VIC 3550 Australia",
+      tlf: "(03) 5448 1800",
       hours: {
       monthurs: '09:00-17:30',
       fri: '09:00-23:30',
@@ -45,8 +45,8 @@ const storeObj = [
     },
     {
         name: "Mildura",
-        address: "Bendigo street",
-        tlf: "123456895",
+        address: "Corner Fifteenth Street & Etiwanda Avenue, Mildura, VIC 3500 Australia",
+        tlf: "(03) 5022 1922",
         hours: {
         week: '09:00-17:30',
         sat: '11:00-16:30',
@@ -55,8 +55,8 @@ const storeObj = [
       },
       {
         name: "Echuca",
-        address: "Bendigo street",
-        tlf: "123456895",
+        address: "27 - 29 Nepean Hwy, Mentone, VIC 3194 Australia",
+        tlf: "(03) 8585 6500",
         hours: {
         monweds: '09:00-17:30',
         thurs: '09:00-22:00',
@@ -66,9 +66,9 @@ const storeObj = [
       },
       },    
       {
-        name: "Bendigo",
-        address: "Bendigo street",
-        tlf: "123456895",
+        name: "Bairnsdale",
+        address: "58 Bailey St, Bairnsdale, VIC 3875 Australia",
+        tlf: "(03) 5153 7800",
         hours: {
         monthurs: '09:00-17:30',
         fri: '09:00-23:30',
@@ -77,40 +77,16 @@ const storeObj = [
       },
       },
       {
-          name: "Mildura",
-          address: "Bendigo street",
-          tlf: "123456895",
+          name: "Geelong",
+          address: "25 - 27 Settlement Road, Belmont, VIC 3216 Australia",
+          tlf: " (03) 4245 4386",
           hours: {
           week: '09:00-17:30',
           sat: '11:00-16:30',
           sun: '11:00-12:30',
         },
-        },
-        {
-          name: "Echuca",
-          address: "Bendigo street",
-          tlf: "123456895",
-          hours: {
-          monweds: '09:00-17:30',
-          thurs: '09:00-22:00',
-          fri: '08:30-20:00',
-          sat: '11:00-16:30',
-          sun: '11:00-12:30',
-        },
-    },
-    {
-        name: "Echuca",
-        address: "Bendigo street",
-        tlf: "123456895",
-        hours: {
-        monweds: '09:00-17:30',
-        thurs: '09:00-22:00',
-        fri: '08:30-20:00',
-        sat: '11:00-16:30',
-        sun: '11:00-12:30',
-      },
-  }
-   ]
+        }
+    ]
 
    /* sort objs in array by name */
    storeObj.sort((a, b) => a.name.localeCompare(b.name));
@@ -132,6 +108,23 @@ const storeObj = [
     title.innerText = storeObj[i].name;
     storeItem.appendChild(title);
     
+     /* another indiv container */
+     const another = document.createElement('div');
+     another.classList.add('add-tlf');
+     storeItem.appendChild(another);
+
+    
+    const tlf = document.createElement('div');
+    tlf.classList.add('tlf');
+    tlf.innerText = "Phone: " + storeObj[i].tlf;
+    another.appendChild(tlf);
+
+    /* append address to second div */
+    const addr = document.createElement('div');
+    addr.classList.add('address');
+    addr.innerText = "Address: " + storeObj[i].address;
+    another.appendChild(addr);
+
     /* second indiv container */
     const details = document.createElement('div');
     details.classList.add('store-details');
@@ -139,17 +132,6 @@ const storeObj = [
     
     /* select second item for appending inside div */ 
     const sec = storeItem.querySelector('.store-details');
-    
-    /* append address to second div */
-    const addr = document.createElement('div');
-    addr.classList.add('address');
-    addr.innerText = storeObj[i].address;
-    sec.appendChild(addr);
-    
-    const tlf = document.createElement('div');
-    tlf.classList.add('tlf');
-    tlf.innerText = storeObj[i].tlf;
-    sec.appendChild(tlf);
     
     /* create a list for opening hours */ 
     const hrs = document.createElement('ul');
@@ -202,8 +184,9 @@ const storeObj = [
     storeDir.innerText= 'Get directions';
     third.appendChild(storeDir);
     
-  }
-  
+}
+
+
   
   
   

@@ -83,14 +83,23 @@ html,body
 /* Navigation */
 /**************/
 
+.nav-outer {
+  position: relative;
+}
+
+/* hamburger menu responsive */
+.nav-outer img {
+  display: none;
+  padding: 15px;
+}
+
 .nav {
   display: flex;
   align-items: center;  
 }
-  
+ 
 .nav-menu-item {
   padding-left: 10px;
-  text-decoration: none;
   font-weight: 600;
 }
 
@@ -99,18 +108,8 @@ html,body
   color: black;
 }
 
-.nav-outer {
-  position: relative;
-}
-
-.nav-outer img {
-  display: none;
-  padding: 15px;
-}
-
-
+/* link interactions */
 .nav-menu-item a:link {color:white;}
-
 .nav-menu-item a:hover {color:white;}
 .nav-menu-item a:active {color:white;}
 
@@ -124,7 +123,7 @@ html,body
 
 
 /* For tablet size and below show hamburger with black nav */
-@media (max-width: 760px){
+@media (max-width: 768px){
 
   /* show hamburger menu */
   .nav-outer img {
@@ -187,8 +186,10 @@ html,body
 
 
 
-
+/************************************************/
 /* centering main section of page in the middle */
+/************************************************/
+
 .main-container {
   margin: 0 auto;
   width: 100vw;
@@ -196,8 +197,10 @@ html,body
   padding: 0px 30px 20px 20px;
 }
 
-
+/******************/
 /* slide/carousel */
+/*****************/
+
 #carouselExampleControls {
   margin-top: 80px;
 }
@@ -244,6 +247,11 @@ html,body
   margin: 0px;
 }
 
+/* make label white when whole grid is hovered */
+.category-grid-indiv:hover .category-grid-indiv-label {
+  color: white;
+}
+
 .sale {
   background-color: #E41951;
   position: absolute;
@@ -259,18 +267,14 @@ html,body
   padding: 0px;
 }
 
-/*
-.sale_expand {
-  width: 200px;
-  background-color: #E41951;
-  transition: width 2s ease-in;
-}
-*/
-
-.category-grid-indiv:hover .category-grid-indiv-label {
-  color: white;
+/* between tablet and up to big screen: handle grid layour*/ 
+@media (min-width: 768px) and (max-width: 1200px) {
+  .category-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
+/* For tablet and up: seperate media queries to handle sale bar expansion on hover */
 @media (min-width: 768px) {
 
   .sale {
@@ -280,72 +284,62 @@ html,body
   }
 
   .category-grid-indiv:hover .sale {
-    
-    width: 100%;
-    
+    width: 100%; 
   }
+
   .category-grid-indiv:hover {
     box-shadow: 0 0 10px black;
-   
-    }
-
+  }
 }
 
-
+/* For smaller tablet and down: seperate media queries to handle sale bar expansion on hover */
 @media (max-width: 768px) {
+
+  .category-grid {
+    margin-right: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid-indiv {
+    padding: 10px;
+  }
+
+  .category-grid-indiv img {
+    display: none;
+  }
+
+  .category-grid-indiv-label {
+    border: 1px solid black;
+  }
+
   .category-grid-indiv-label .h3 {
     text-align: end;
     padding-right: 10px;
   }
-  .category-grid {
-    margin-right: 20px;
-  }
 
+  .sale {
+    padding: 7px;
+    top: -14px;
+    left: 10px;
+    z-index: 600;
+  }
+  
   /* using a different method since want label h3 text displayed on top of colour */
   .saleplace {
     background: linear-gradient(to left,#9FCCC6 50%, #E41951 50%) right;
     background-size: 200%;
     transition:  .5s ease-out;
   }
+
   .category-grid-indiv:hover .saleplace {
     background-position: left;
   }
-  
 }
 
 
-/* between tablet and up to big screen */ 
-@media (min-width: 768px) and (max-width: 1200px) {
-  .category-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-/* between tablet and anything smaller such as mobile */
-@media (max-width: 768px) {
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-  .category-grid-indiv {
-    padding: 10px;
-  }
-  .category-grid-indiv img {
-    display: none;
-  }
-  .category-grid-indiv-label {
-    border: 1px solid black;
-  }
-  .sale {
-    padding: 7px;
-    top: -14px;
-    left: 10px;
-    z-index: 600;
-
-  }
-}
 
 /*******************************/
-/* Styling INspiration section */
+/* Styling Inspiration section */
 /*******************************/
 
 
@@ -354,6 +348,7 @@ html,body
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* have image span 2 columns */
 .lookbook-image {
   grid-column-start: 2;
   grid-column-end: 4;
@@ -391,17 +386,7 @@ html,body
   margin-bottom: 40px;
 }
 
-/*
-.lookbook-image-cat {
-  background-color: #E41951;
-  border-radius: 50%;
-  top: 20px;
-  left: 0px;
-  position: absolute;
-  width: 220px;
-  height: 80px;
-}
-*/
+/* .circle .content are for placing 2022 christmas gift guide over image */ 
 .circle {
   background-color: #E41951;
   color: white;
@@ -415,6 +400,7 @@ html,body
   justify-content: center;
   align-items: center;
 }
+
 .content {
   transform: rotate(30deg);
   padding-left: 5px;
@@ -431,8 +417,10 @@ html,body
 
 
 
-
+/*********/
 /* About */
+/*********/
+
 .about_section-button {
   color: black;
   padding: 15px;
@@ -449,6 +437,7 @@ html,body
   cursor: pointer;
 }
 
+/* classes for javascript to display/remove */
 .moreabout {
   display: none;
 }
@@ -462,6 +451,8 @@ html,body
 /**********/
 /* footer */
 /**********/
+
+/* needed so many divs to get the bottom part of the footer to be max width */
 
 .footer-main {
   width: 100%;
@@ -499,22 +490,6 @@ html,body
   margin-right: 18px;
 }
 
-@media (max-width:760px) and (min-width:580px) {
-  .footer-top-indiv {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:580px) {
-  .footer-top {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
@@ -525,12 +500,24 @@ html,body
 .footer-bottom-column{
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
-.footer-bottom-copy {
-  text-align: center;
- 
 
+/* table and small tables change footer layout */
+@media (max-width:760px) and (min-width:580px) {
+  .footer-top-indiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* for small tablets change footer from 4 columns to 1 */
+@media (max-width:580px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
 }
 
 /**********************/
@@ -546,22 +533,25 @@ html,body
   background-color: #9FCCC6;
   z-index: 100;
   border: 1px solid black;
+  /* move out of page to start with */
   transform: translateX(100%);
   transition: all 0.5s ease-in-out;
 }
 
 .feedback-button {
+  /* this is to position the tab left of main div */
+  position: absolute;
+  left: -82px;
+  bottom: 100px;
+  padding: 10px 20px;
+  transform: rotate(-90deg);
+
+
   border-radius: 20px 20px 0 0; 
   color: #fff;
   font-size: 16px;
   font-weight: bold;
-  left: -82px;
-  bottom: 100px;
-  padding: 10px 20px;
-  position: absolute;
   text-transform: uppercase;
-  transform: rotate(-90deg);
-  /*transform-origin: 113px 5px 0; */
   background: black;
 }
 
@@ -575,11 +565,11 @@ html,body
 }
 
 .feedback-open {
+  /* move into page through javascript */
   transform: translateX(40%);
   opacity: 1;
   z-index: 900;
 }
-
 
 .feedback-row {
   padding-bottom: 10px;
@@ -607,15 +597,6 @@ label,input{
   width: 300px;
 }
 
-.red {
-  color: #E41951;
-  font-weight: 500;
-}
-
-.red-border{
-  border: 2px solid #E41951;
-}
-
 textarea:focus,
 input[type="text"]:focus,
 select:focus {
@@ -623,6 +604,15 @@ select:focus {
   border: 2px solid black;
   outline: none;
   box-shadow: 0 0 6px grey;
+}
+
+.red {
+  color: #E41951;
+  font-weight: 500;
+}
+
+.red-border{
+  border: 2px solid #E41951;
 }
 
 /******************/
@@ -635,36 +625,11 @@ select:focus {
   display:grid;
 }
 
-
-@media (min-width: 1200px) {
-  .store-container {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 1200px){
-  .store-container {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 20px;
-  }
-
-
-}
-
-
-
-
-
 .store-container-indiv {
-
   border: 1px solid black;
   border-radius: 20px;
   background: #fff 0 0 no-repeat padding-box;
   display: grid;
-
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "title title"
@@ -672,24 +637,9 @@ select:focus {
     "details store-buttons";
 }
 
+/* when whole div is hovered */
 .store-container-indiv:hover {
   box-shadow: 0 0px 10px black;
-}
-
-@media (max-width: 680px) {
-  .store-container-indiv {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "title"
-      "add-tlf"
-      "details"
-      "store-buttons";
-  }
-}
-
-.add-tlf {
-  grid-area: add-tlf;
-  padding: 20px 20px 0px 20px;
 }
 
 .store-title {
@@ -697,12 +647,17 @@ select:focus {
   padding: 20px 20px 0px 20px;
 }
 
+.add-tlf {
+  grid-area: add-tlf;
+  padding: 20px 20px 0px 20px;
+}
+
+
 .store-details {
   grid-area: details;
   padding-left: 20px;
   padding-bottom: 20px;
   display: flex;
-
   flex-direction: column;
   justify-content: flex-end;
 
@@ -744,13 +699,42 @@ select:focus {
   border: 1px solid black;
   border-radius: 20px;
   transition: all 1s ease-out;
-
 }
 
 .store-info:hover {
   background-color: white;
   box-shadow: 0 0 10px grey;
 }
+
+/* reponsive between big screen and smaller screens */
+@media (min-width: 1200px) {
+  .store-container {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1200px){
+  .store-container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .store-container-indiv {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "add-tlf"
+      "details"
+      "store-buttons";
+  }
+}
+
+
 
 /*************/
 /* for modal */
