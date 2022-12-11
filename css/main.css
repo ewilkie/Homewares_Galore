@@ -109,7 +109,7 @@ html,body
 }
 
 /* link interactions */
-.nav-menu-item a:link {color:white;}
+/* .nav-menu-item a:link {color:white;} */
 .nav-menu-item a:hover {color:white;}
 .nav-menu-item a:active {color:white;}
 
