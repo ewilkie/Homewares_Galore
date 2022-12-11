@@ -1,13 +1,6 @@
-
-
- 
-// to open and close the feedback div
-const menuController = document.querySelector('.feedback-button');
-menuController.addEventListener('click', function() {
-
-  // toggle feedback open and close
-  document.querySelector('.feedback-container').classList.toggle('feedback-open');
-});
+//////////////////////////////
+// Common JS for all pages //
+/////////////////////////////
 
 
 // feed back form error handling
@@ -88,7 +81,15 @@ function handleFormSubmission(event) {
 
 }
 
+// to open and close the feedback div
+const menuController = document.querySelector('.feedback-button');
+menuController.addEventListener('click', function() {
 
+  // toggle feedback open and close
+  document.querySelector('.feedback-container').classList.toggle('feedback-open');
+});
+
+// attach event handler to feedbakc submit form
 const applicationForm = document.querySelector('.feedback-form');
 applicationForm.addEventListener('submit', handleFormSubmission);
  
@@ -96,10 +97,12 @@ applicationForm.addEventListener('submit', handleFormSubmission);
 /************ */
 // for modal */
 /*********** */
+
+// To toggle between overlay modal hidden or visible
 const overlay = document.querySelector(".overlay");
 const modal = document.querySelector(".modal-div");
 
-// open modal function
+// open modal function attached to contact us href
 const openModal = function (event) {
   event.preventDefault();
 
@@ -107,20 +110,18 @@ const openModal = function (event) {
   overlay.classList.remove("hidden");
 };
 
-const openModalBtn = document.querySelector(".contact");
-
 // open modal event
+const openModalBtn = document.querySelector(".contact");
 openModalBtn.addEventListener("click", openModal);
 
 
-
-const closeModalBtn = document.querySelector(".modal-cls-button");
-
+// close modal function attached to close button 
 const closeModal = function (event) {
-
   event.preventDefault();
+  
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
 
+const closeModalBtn = document.querySelector(".modal-cls-button");
 closeModalBtn.addEventListener("click", closeModal);

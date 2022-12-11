@@ -1,6 +1,9 @@
 /**************************** */
 /* Javascript for stores page */
 /**************************** */
+
+// array of objects containing data to populate page with
+
 const storeObj = [
     {
     name: "Melbourne CBD",
@@ -88,38 +91,38 @@ const storeObj = [
         }
     ]
 
-   /* sort objs in array by name */
+   // sort objs in array by name */
    storeObj.sort((a, b) => a.name.localeCompare(b.name));
   
-  /* loop to populate page with information stored in array */
+  // loop to populate page with information stored in array */
   for (let i=0; i < storeObj.length; i++) {
     
-    /* create div for each store */
+    // create div for each store */
     const storeItem = document.createElement('div');
-    /* add styling class for div */
+    // add styling class for div */
     storeItem.classList.add('store-container-indiv');  
-   /* add div to page */
+    // add div to page */
     document.querySelector('.store-container').appendChild(storeItem);
     
-    /* add title to page */
+    // add title to indiv container */
     const title = document.createElement('h2');
     title.classList.add('h2');
     title.classList.add('store-title');
     title.innerText = storeObj[i].name;
     storeItem.appendChild(title);
     
-     /* another indiv container */
+     // another div to indiv container to potition address and tlf
      const another = document.createElement('div');
      another.classList.add('add-tlf');
      storeItem.appendChild(another);
 
-    
+    // create another div for tlf  
     const tlf = document.createElement('div');
     tlf.classList.add('tlf');
     tlf.innerText = "Phone: " + storeObj[i].tlf;
     another.appendChild(tlf);
 
-    /* append address to second div */
+    // append address to another div */
     const addr = document.createElement('div');
     addr.classList.add('address');
     addr.innerText = "Address: " + storeObj[i].address;
@@ -139,11 +142,13 @@ const storeObj = [
     
     let openingHours = storeObj[i].hours;
     
-    console.log(openingHours);
+    // loop to select all opening hours in object
     for(var j in openingHours) {
-      console.log(j);
+
+      // create list element for each  
       const oh = document.createElement('li');
     
+      // to initialise
       var ohText = "";
       if (j === "week"){
         ohText = "Monday - Friday:";      
@@ -161,7 +166,6 @@ const storeObj = [
         ohText = "Sunday:";
       }
       oh.innerHTML = "<span>"+ ohText + "</span>" + openingHours[j];
-      //oh.innerText = ohText + openingHours[j];
       sec.appendChild(oh);
     }
     
@@ -178,6 +182,7 @@ const storeObj = [
     storeInfo.innerText= 'View store information';
     third.appendChild(storeInfo);
     
+    /* store directions button */
     const storeDir = document.createElement('div');
     storeDir.classList.add('store-info');
     storeDir.classList.add('directions');
