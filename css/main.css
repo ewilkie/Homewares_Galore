@@ -38,6 +38,8 @@ html,body
   align-items: center;
   color: #182636;
   padding: 20px 0;
+  /* mostly for modal */
+  width: 100%;
 }
 
 .separator h2{
@@ -96,12 +98,6 @@ html,body
   text-decoration: none;
   color: black;
 }
-
-.nav-menu-item a:link {color:white;}
-.nav-menu-item a:visited {color:black;}
-.nav-menu-item a:hover {color:white;}
-.nav-menu-item a:active {color:white;}
-
 
 .nav-outer {
   position: relative;
@@ -168,6 +164,22 @@ html,body
     color: white;
   }
 }
+
+
+
+.nav-menu-item a:link {color:white;}
+
+.nav-menu-item a:hover {color:white;}
+.nav-menu-item a:active {color:white;}
+
+/* This interferes with active highlight below
+.nav-menu-item a:visited {color:black;} */
+
+/* text highlight in white on current page */
+.nav-link.active  {
+  color: white;
+}
+
 
 /* centering main section of page in the middle */
 .main-container {
@@ -763,6 +775,46 @@ select:focus {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+}
 
+.modal-sec {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
+.modal-sec p {
+  text-align:left;
+}
+
+@media (min-width: 480px){
+  .modal-sec {
+    flex-direction: row;
+  }
+
+}
+
+.modal-button {
+
+  border: 1px solid black;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal-button:hover {
+  background-color: grey;
+}
+
+.modal-store-btn {
+  background-color: #9FCCC6;
+  width: 90%;
+  border-radius: 20px; 
+  margin-left: 20px;
+}
+
+.modal-text {
+  width: 80%;
 }
